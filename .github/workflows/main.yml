@@ -1,4 +1,3 @@
-
 name: Push-to-EC2
 
 # Trigger deployment only on push to main branch
@@ -10,7 +9,7 @@ on:
 jobs:
   deploy:
     name: Deploy to EC2 on main branch push
-    runs-on: ubuntu-latest
+    runs-on: linux-latest
 
     steps:
       - name: Checkout the files
@@ -33,7 +32,7 @@ jobs:
           script: |
             sudo yum update -y
             sudo yum install -y httpd
-            sudo systemctl start httpd
-            sudo systemctl enable httpd
+            sudo systemctl start apache2
+            sudo systemctl enable apache2
             cd home
             sudo mv * /var/www/html
