@@ -37,5 +37,4 @@ jobs:
             cd home
             sudo rm -rf Air\ M@il/
             sudo rm -rf forms/
-            sudo rm -rf assets/
             sudo mv -f * /var/www/html
