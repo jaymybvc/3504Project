@@ -36,6 +36,8 @@ jobs:
             sudo systemctl start httpd
             sudo systemctl enable httpd
             cd home
+            cd /var/www/html
             sudo rm -rf Air\ M@il/
             sudo rm -rf forms/
+            sudo rm -rf assets/
             sudo mv -f * /var/www/html
